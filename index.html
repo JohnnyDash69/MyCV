@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johandre's CV</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p, ul, form {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e2e2e2;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .profile-picture {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            border: 3px solid #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        form {
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Johandre's CV</h1>
+        
+        <section id="bio">
+            <h2>Who am I?</h2>
+            <p>My name is Johandre. I am a 22 year old currently living in Cape Town, South Africa. I am very social and love to hang out with my friends or family. I enjoy playing sports, especially Golf and Rugby.
+                I also enjoy anything and everything about cars. I aspire to be rich enough one day to have my own private collection of the rarest and most valuable supercars.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>My Contact Details</h2>
+            <p>Email Address: johandrematt@icloud.com</p>
+            <p>Phone number: 083 790 8050</p>
+            <p>Home Address: 6 5th Avenue, Melkbosstrand, Cape Town</p>
+            <p>Linkedin Profile: <a href="https://www.linkedin.com/in/johandre-matthysen-87088a224/" target="_blank">Johandre Matthysen</a></p>
+            <img src="Me.JPG" alt="Profile Picture" class="profile-picture" style="width: 150px; height: auto;">
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>Amazing communication capabilities</li>
+                <li>Problem solving</li>
+                <li>Creative</li>
+                <li>Fast and efficient</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>My Education</h2>
+            <p>Full Stack Software Engineer and Web Development through HyperionDev</p>
+            <p>Social Media Marketing Course through Vega</p>
+        </section>
+
+        <section id="work-experience">
+            <h2>My Work Experience</h2>
+            <p>Internship (8 months): R-Squared Agency</p>
+            <p>Junior Campaign Manager (14 months): R-Squared Agency</p>
+            <p>Account Executive (2023 - currently): R-Squared Agency</p>
+        </section>
+
+        <section id="get-form">
+            <h2>Search My CV</h2>
+            <form action="/search" method="GET">
+                <label for="search-input">Search for keywords:</label>
+                <input type="text" id="search-input" name="q" placeholder="Enter keywords">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section id="post-form">
+            <h2>Contact Me</h2>
+            <form action="/submit_post" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>
