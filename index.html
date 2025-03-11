@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Johandre's CV</title>
     <style>
+      
+        /* Define root CSS variables for primary and secondary colors */
+:root {
+  --primary-color: #333333; /* Dark color for backgrounds */
+  --secondary-color: #ffffff; /* White color for text */
+}
 
-        :root {
-          --primary-color: #333333;
-          --secondary-color: #ffffff;
-        }
+/* Apply the root variables to the body styling */
+body {
+  background-color: var(--primary-color); /* Set background color using primary color variable */
+  color: var(--secondary-color); /* Set text color using secondary color variable */
+}
 
-        /* Use the variables */
-        body {
-          background-color: var(--primary-color);
-          color: var(--secondary-color);
-        }
+/* Additional body styling */
+body {
+  font-family: 'Arial', sans-serif; /* Set font family for the body */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #f4f4f4; /* Light gray background color */
+  color: #333; /* Dark text color */
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
+        /* Container for the main content with centered alignment and shadow */
         .container {
             width: 80%;
             margin: 0 auto;
@@ -31,50 +36,61 @@
             background: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        /* Centered heading styling for h1 and h2 */
         h1, h2 {
             color: #333;
             text-align: center;
         }
+        /* Main heading styling */
         h1 {
             font-size: 2.5em;
             margin-top: 20px;
         }
+        /* Section heading styling with bottom border */
         h2 {
             border-bottom: 2px solid #333;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
+        /* General styling for paragraphs, lists, and forms */
         p, ul, form {
             margin-bottom: 20px;
             line-height: 1.6;
         }
+        /* Removing default list styling for the unordered list */
         ul {
             list-style: none;
             padding: 0;
         }
+        /* Styling for individual list items */
         ul li {
             background: #e2e2e2;
             margin: 5px 0;
             padding: 10px;
             border-radius: 5px;
         }
+        /* Link styling */
         a {
             color: #007bff;
             text-decoration: none;
         }
+        /* Hover effect for links */
         a:hover {
             text-decoration: underline;
         }
+        /* Styling for the profile picture with centered alignment and circular border */
         .profile-picture {
             display: block;
             margin: 20px auto;
             border-radius: 50%;
             border: 3px solid #333;
         }
+        /* Label styling for form inputs */
         label {
             display: block;
             margin-top: 10px;
         }
+        /* Styling for text and email input fields, and the textarea */
         input[type="text"], input[type="email"], textarea {
             width: 100%;
             padding: 10px;
@@ -82,6 +98,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        /* Styling for buttons */
         button {
             display: inline-block;
             padding: 10px 20px;
@@ -91,12 +108,15 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        /* Button hover effect */
         button:hover {
             background-color: #0056b3;
         }
+        /* Aligning form content to the left */
         form {
             text-align: left;
         }
+        /* Media query for smaller screen sizes (e.g., tablets) */
         @media (max-width: 768px) {
             .container {
                 width: 95%;
@@ -109,9 +129,12 @@
 </head>
 <body>
 
+    <!-- Main container for the CV content -->
     <div class="container">
+        <!-- Title of the CV -->
         <h1>Johandre's CV</h1>
         
+        <!-- Bio section with personal information -->
         <section id="bio">
             <h2>Who am I?</h2>
             <p>My name is Johandre. I am a 22 year old currently living in Cape Town, South Africa. I am very social and love to hang out with my friends or family. I enjoy playing sports, especially Golf and Rugby.
@@ -119,15 +142,18 @@
             </p>
         </section>
 
+        <!-- Contact details section with email, phone, address, and LinkedIn profile -->
         <section id="contact">
             <h2>My Contact Details</h2>
             <p>Email Address: johandrematt@icloud.com</p>
             <p>Phone number: 083 790 8050</p>
             <p>Home Address: 6 5th Avenue, Melkbosstrand, Cape Town</p>
             <p>Linkedin Profile: <a href="https://www.linkedin.com/in/johandre-matthysen-87088a224/" target="_blank">Johandre Matthysen</a></p>
+            <!-- Displaying profile picture centered with circular styling -->
             <img src="Me.JPG" alt="Profile Picture" class="profile-picture" style="width: 150px; height: auto;">
         </section>
 
+        <!-- Skills section listing abilities and strengths -->
         <section id="skills">
             <h2>My Skills</h2>
             <ul>
@@ -138,12 +164,14 @@
             </ul>
         </section>
 
+        <!-- Education section with completed courses -->
         <section id="education">
             <h2>My Education</h2>
             <p>Full Stack Software Engineer and Web Development through HyperionDev</p>
             <p>Social Media Marketing Course through Vega</p>
         </section>
 
+        <!-- Work experience section with job roles and durations -->
         <section id="work-experience">
             <h2>My Work Experience</h2>
             <p>Internship (8 months): R-Squared Agency</p>
@@ -151,6 +179,7 @@
             <p>Account Executive (2023 - currently): R-Squared Agency</p>
         </section>
 
+        <!-- Search form allowing users to search within the CV -->
         <section id="get-form">
             <h2>Search My CV</h2>
             <form action="/search" method="GET">
@@ -160,15 +189,20 @@
             </form>
         </section>
 
+        <!-- Contact form for visitors to send a message -->
         <section id="post-form">
             <h2>Contact Me</h2>
             <form action="/submit_post" method="POST">
+                <!-- Input for name -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
+                <!-- Input for email -->
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+                <!-- Text area for message -->
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
+                <!-- Submit button for the form -->
                 <button type="submit">Submit</button>
             </form>
         </section>
