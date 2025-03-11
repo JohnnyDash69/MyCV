@@ -5,13 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Johandre's CV</title>
     <style>
-        /* Styling for the body of the page */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+      
+        /* Define root CSS variables for primary and secondary colors */
+:root {
+  --primary-color: #333333; /* Dark color for backgrounds */
+  --secondary-color: #ffffff; /* White color for text */
+}
+
+/* Apply the root variables to the body styling */
+body {
+  background-color: var(--primary-color); /* Set background color using primary color variable */
+  color: var(--secondary-color); /* Set text color using secondary color variable */
+}
+
+/* Additional body styling */
+body {
+  font-family: 'Arial', sans-serif; /* Set font family for the body */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #f4f4f4; /* Light gray background color */
+  color: #333; /* Dark text color */
+}
+
         }
         /* Container for the main content with centered alignment and shadow */
         .container {
